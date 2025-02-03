@@ -8,8 +8,5 @@ public class BackrpgApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(BackrpgApplication.class, args);
-
-
-
 	}
 }
