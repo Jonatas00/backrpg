@@ -20,6 +20,10 @@ public class UserService {
     return userRepository.findAll();
   }
 
+  public User addUser(User user) {
+    return userRepository.save(user);
+  }
+
   public Optional<User> deleteUser(long id) {
     Optional<User> deletedUser = userRepository.findById(id);
 

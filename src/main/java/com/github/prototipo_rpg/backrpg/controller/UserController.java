@@ -1,7 +1,6 @@
 package com.github.prototipo_rpg.backrpg.controller;
 
 import com.github.prototipo_rpg.backrpg.entities.User;
-import com.github.prototipo_rpg.backrpg.repositories.UserRepository;
 import com.github.prototipo_rpg.backrpg.service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -15,7 +14,6 @@ import java.util.Optional;
 @AllArgsConstructor
 public class UserController {
 
-  private final UserRepository userRepository;
   private final UserService userService;
 
   @GetMapping
@@ -27,7 +25,7 @@ public class UserController {
 
   @PostMapping
   public ResponseEntity<User> addUser(@RequestBody User user) {
-    User savedUser = userRepository.save(user);
+    User savedUser = userService.addUser(user);
 
     return ResponseEntity.status(201).body(savedUser);
   }
