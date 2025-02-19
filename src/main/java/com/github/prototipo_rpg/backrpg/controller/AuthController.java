@@ -1,9 +1,9 @@
 package com.github.prototipo_rpg.backrpg.controller;
 
-import com.github.prototipo_rpg.backrpg.entities.user.User;
-import com.github.prototipo_rpg.backrpg.service.UserService;
 import com.github.prototipo_rpg.backrpg.entities.user.LoginDTO;
 import com.github.prototipo_rpg.backrpg.entities.user.RegisterDTO;
+import com.github.prototipo_rpg.backrpg.entities.user.User;
+import com.github.prototipo_rpg.backrpg.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
