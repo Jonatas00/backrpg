@@ -1,7 +1,8 @@
 package com.github.prototipo_rpg.backrpg.service;
 
-import com.github.prototipo_rpg.backrpg.entities.User;
+import com.github.prototipo_rpg.backrpg.entities.user.User;
 import com.github.prototipo_rpg.backrpg.repositories.UserRepository;
+import com.github.prototipo_rpg.backrpg.entities.user.RegisterDTO;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -20,8 +21,13 @@ public class UserService {
     return userRepository.findAll();
   }
 
-  public User addUser(User user) {
-    return userRepository.save(user);
+  public User registerUser(RegisterDTO dto) {
+    User user = new User();
+    user.setName(dto.name());
+    user.setEmail(dto.email());
+    user.setHashPassword( dto.password());
+
+    return user;
   }
 
   public Optional<User> deleteUser(long id) {

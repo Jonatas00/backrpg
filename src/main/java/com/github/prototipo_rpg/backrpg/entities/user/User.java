@@ -1,4 +1,4 @@
-package com.github.prototipo_rpg.backrpg.entities;
+package com.github.prototipo_rpg.backrpg.entities.user;
 
 import jakarta.persistence.*;
 import lombok.Getter;
