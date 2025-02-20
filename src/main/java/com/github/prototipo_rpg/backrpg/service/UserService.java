@@ -1,10 +1,12 @@
 package com.github.prototipo_rpg.backrpg.service;
 
+import com.github.prototipo_rpg.backrpg.entities.roles.Role;
 import com.github.prototipo_rpg.backrpg.entities.user.RegisterDTO;
 import com.github.prototipo_rpg.backrpg.entities.user.User;
 import com.github.prototipo_rpg.backrpg.repositories.UserRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -26,6 +28,8 @@ public class UserService {
     user.setName(dto.name());
     user.setEmail(dto.email());
     user.setHashPassword(dto.password());
+
+    // TODO: implements default role registration
 
     userRepository.save(user);
 

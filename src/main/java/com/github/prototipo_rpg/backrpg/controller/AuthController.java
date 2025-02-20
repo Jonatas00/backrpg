@@ -30,6 +30,6 @@ public class AuthController {
   public ResponseEntity<?> register(@RequestBody RegisterDTO registerDTO) {
     User user = userService.registerUser(registerDTO);
 
-    return ResponseEntity.ok().body(user);
+    return ResponseEntity.status(201).body(user);
   }
 }
